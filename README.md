@@ -26,7 +26,6 @@ Following observations were derived by exploring the dataset
 ![alt text](https://github.com/svrashank/Sql-practice-project/blob/master/Covid%20deaths%20per%20continent.JPG "Distribution of death across continent")
 
 * The infection count across countries 
-![alt text](https://github.com/svrashank/Sql-practice-project/blob/master/Infection%20Count%20of%20Countries.JPG 'Infection Count of Countries')
 
 * Created a temp table of the icu patients and based on that calculated the rolling average which gave the weekly icu patients. This was calculated because we can calculate the weekly percentage of patients admitted to icu 
 * Hence we can obtain the average of icu admission percentage country wise 
