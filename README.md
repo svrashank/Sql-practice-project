@@ -9,7 +9,7 @@
 * Start by following this https://www.youtube.com/watch?v=qfyynHBFOsM sql tutorial but then did some analysis on my own 
 * Dataset : https://ourworldindata.org/covid-deaths 
 * Packages/languages : SQL ,Tabluea,excel 
-* Tabluea visualizations : https://public.tableau.com/app/profile/vrashank.shetty/viz/PracticeProject_16860516895090/Dashboard1?publish=yes
+* Tabluea visualizations : https://public.tableau.com/app/profile/vrashank.shetty/viz/PracticeProject_16860516895090/Dashboard1?publish=yes 
 
 ### Data Cleaning 
 * The Dataset was workable to begin with 
