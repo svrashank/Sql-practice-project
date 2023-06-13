@@ -24,4 +24,9 @@ Following observations were derived by exploring the dataset
 ![alt text](https://github.com/svrashank/Sql-practice-project/blob/master/Country%20with%20highest%20no_of_cases%20in%20a%20day.JPG "Highest New Cases in a day")
 * Distribution of deaths across continent 
 ![alt text](https://github.com/svrashank/Sql-practice-project/blob/master/Covid%20deaths%20per%20continent.JPG "Distribution of death across continent")
-* 
+* The infection count across countries 
+![alt text](https://github.com/svrashank/Sql-practice-project/blob/master/Infection%20Count%20of%20Countries.JPG 'Infection Count of Countries')
+* Created a temp table of the icu patients and based on that calculated the rolling average which gave the weekly icu patients. This was calculated because we can calculate the weekly percentage of patients admitted to icu 
+* Hence we can obtain the average of icu admission percentage country wise 
+* ![alt text](https://github.com/svrashank/Sql-practice-project/blob/master/Avg%20ICU%20admission%20across%20countries.JPG 'Average icu admission percentage')
+
