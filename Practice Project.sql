@@ -36,8 +36,8 @@ LINES TERMINATED BY '\n'
 IGNORE 1 LINES ;
 
 
--- EXPLORATORY DATA ANALYSIS 
-
+-- SELECT location,RecordDate,population,total_cases,new_cases,total_deaths FROM Covid_deaths 
+-- ORDER BY 1;
 
 -- Death percentage of India 
 SELECT location,RecordDate,
@@ -106,6 +106,7 @@ ORDER BY Cases DESC;
 
 
 -- Global numbers of cases,deaths and death percentage each day 
+
 SELECT RecordDate,SUM(new_cases) as Total_cases,
 SUM(new_deaths) as total_deaths ,
 (SUM(new_deaths)/SUM(new_cases)) * 100  as death_percentage_per_day 
@@ -126,18 +127,22 @@ ORDER BY ICU_patients_percentage DESC;
 
 
 -- Create a rolling average for icu patients to get weekly icu patients and calculate weekly icu admissions percentage
--- use CTE 
-WITH ICU_patients (location,RecordDate,total_cases, weekly_icu_admissions,Weekly_icu_patients) 
-AS (
+-- use CTE icu_admissions
+CREATE TABLE ICU_patients (
 SELECT location,RecordDate,total_cases, weekly_icu_admissions,
 SUM(icu_patients) OVER (PARTITION BY location ORDER BY RecordDate ROWS BETWEEN 6 PRECEDING AND CURRENT ROW) AS Weekly_icu_patients
 FROM Covid_deaths 
 WHERE icu_patients > 0 and weekly_icu_admissions > 0
-ORDER BY location,RecordDate)
+ORDER BY location,RecordDate);
 
+CREATE TABLE ICU_ADMISSIONS(
 SELECT *,(weekly_icu_admissions/Weekly_icu_patients) * 100 AS  weekly_icu_admission_percentage 
-FROM ICU_patients  ;
+FROM ICU_patients)  ;
 
+CREATE VIEW highest_avg_ICU_admission_percentage AS 
+SELECT location, AVG(weekly_icu_admission_percentage) as avg_weekly_icu_admission_percentage FROM icu_admissions
+GROUP BY location 
+ORDER BY avg_weekly_icu_admission_percentage DESC 
 
 
 
