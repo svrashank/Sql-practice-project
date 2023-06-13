@@ -20,3 +20,8 @@ Following observations were derived by exploring the dataset
 * The infection percentage and the death percentage of India were calculated 
 * Created a view for the infection percentage around the world and which was then visualised in tabluea 
 ![alt text](https://github.com/svrashank/Sql-practice-project/blob/master/Infection%20percentage%20of%20Countries.JPG "Infection percentage around the world") 
+* Created a view for the highest number of new cases in a day and then used tabluea to display it 
+![alt text](https://github.com/svrashank/Sql-practice-project/blob/master/Country%20with%20highest%20no_of_cases%20in%20a%20day.JPG "Highest New Cases in a day")
+* Distribution of deaths across continent 
+![alt text](https://github.com/svrashank/Sql-practice-project/blob/master/Covid%20deaths%20per%20continent.JPG "Distribution of death across continent")
+* 
